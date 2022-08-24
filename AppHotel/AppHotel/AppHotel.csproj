@@ -16,6 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="View\" />
+    <EmbeddedResource Update="View\ContratacaoHospedagem.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\HospedagemCalculada.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
