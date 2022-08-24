@@ -6,39 +6,52 @@ namespace AppHotel.Model
 {
     public class Hospedagem
     {
-        public CategoriaQuarto Quarto { get; set; }
+        Suite quarto;
+        int qnt_adultos;
 
-        public int QuantidadeAdultos { get; set; }
+        public int QntAdultos
+        {
+            get => qnt_adultos;
 
-        public int QuantidadeCriancas { get; set; }
+            set
+            {
+                if (value == 0)
+                    throw new Exception("Por Favor, informe a quantidade de adultos");
 
-        public int QuantidadeDias { get; set; }
+                qnt_adultos = value;
+            }
+        }
+
+        public int QntCriancas { get; set; }
+
+        public Suite Quarto
+        {
+            get => quarto;
+
+            set
+            {
+                if (value == null)
+                    throw new Exception("Por Favor, selecione uma suíte.");
+
+                quarto = value;
+            }
+        }
 
         public DateTime DataCheckIn { get; set; }
 
-        public DateTime DataCheckOut { get; set; }
+        public DateTime DateTime { get; set; }
 
-        public double ValorTotal { get; set; }
-
-
-
-        public static int CalcularTempoEstadia(DateTime checkin, DateTime checkout)
+        public int Estadia
         {
-            int total_dias = checkout.Subtract(checkin).Days;
-
-            return total_dias;
+            get
+            {
+                return DataCheckOut.Substract(DataCheckIn).Days;
+            }
         }
 
-
-        public double CalcularValorEstadia()
+        public double ValorTotal
         {
-            double valor_adultos = (QuantidadeAdultos * Quarto.ValorDiariaAdulto) * QuantidadeDias;
-
-            double valor_criancas = (QuantidadeCriancas * Quarto.ValorDiariaCrianca) * QuantidadeDias;
-
-            double valor_hospedagem = valor_adultos + valor_criancas;
-
-            return valor_hospedagem;
+            get => ((QntAdultos * Quarto.ValorDiariaAdulto) + (QntCriancas * Quarto.ValorDiariaCrianca)) * Estadia;
         }
     }
 
