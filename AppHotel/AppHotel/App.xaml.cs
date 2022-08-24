@@ -10,32 +10,32 @@ namespace AppHotel
     public partial class App : Application
     {
 
-         public List<Model.CategoriaQuarto> tipos_quartos = new List<Model.CategoriaQuarto>()
+         public List<Model.Suite> tipos_quartos = new List<Model.Suite>()
          {
 
 
-             new Model.CategoriaQuarto()
+             new Model.Suite()
              {
                  Descricao = "Suíte Super Luxo",
                  ValorDiariaAdulto = 110.0,
                  ValorDiariaCrianca = 55.0
              },
 
-             new Model.CategoriaQuarto()
+             new Model.Suite()
              {
                  Descricao = "Suíte Luxo",
                  ValorDiariaAdulto = 88.0,
                  ValorDiariaCrianca = 40.0
              },
 
-             new Model.CategoriaQuarto()
+             new Model.Suite()
              {
                  Descricao = "Suíte Single",
                  ValorDiariaAdulto = 50.0,
                  ValorDiariaCrianca = 25.0
              },
 
-             new Model.CategoriaQuarto()
+             new Model.Suite()
              {
                  Descricao = "Suíte Crise",
                  ValorDiariaAdulto = 25.0,
