@@ -62,7 +62,7 @@
                                 <Label Text="Check-in:" />
                                 <DatePicker x:Name="dtpck_checkin"
                                             Format="dd/MM/yyyy"
-                                            DateSelected="dtpck_ckeckin_DataSelected" />
+                                            DateSelected="dtpck_checkin_DateSelected" />
                             </StackLayout>
 
                             <StackLayout Orientation="Horizontal">
