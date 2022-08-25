@@ -5,43 +5,37 @@ using System.Threading;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using AppHotel.View;
+using AppHotel.Model;
+
 namespace AppHotel
 {
     public partial class App : Application
     {
 
-         public List<Model.Suite> tipos_quartos = new List<Model.Suite>()
-         {
+        public List<Suite> Suites = new List<Suite>()
+        {
+            new Suite()
+            {
+                Descricao = "Super Luxo",
+                ValorDiariaAdulto = 95.5,
+                ValorDiariaCrianca = 45.5
+            },
 
+            new Suite()
+            {
+                Descricao = "Luxo",
+                ValorDiariaAdulto = 80,
+                ValorDiariaCrianca = 40
+            },
 
-             new Model.Suite()
-             {
-                 Descricao = "Suíte Super Luxo",
-                 ValorDiariaAdulto = 110.0,
-                 ValorDiariaCrianca = 55.0
-             },
-
-             new Model.Suite()
-             {
-                 Descricao = "Suíte Luxo",
-                 ValorDiariaAdulto = 88.0,
-                 ValorDiariaCrianca = 40.0
-             },
-
-             new Model.Suite()
-             {
-                 Descricao = "Suíte Single",
-                 ValorDiariaAdulto = 50.0,
-                 ValorDiariaCrianca = 25.0
-             },
-
-             new Model.Suite()
-             {
-                 Descricao = "Suíte Crise",
-                 ValorDiariaAdulto = 25.0,
-                 ValorDiariaCrianca = 12.5
-             }
-         };
+            new Suite()
+            {
+                Descricao = "Pobre Premium (classe média)",
+                ValorDiariaAdulto = 70.5,
+                ValorDiariaCrianca = 35.5
+            }
+        };
 
 
         public App()
