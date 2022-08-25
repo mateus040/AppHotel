@@ -39,13 +39,13 @@ namespace AppHotel.Model
 
         public DateTime DataCheckIn { get; set; }
 
-        public DateTime DateTime { get; set; }
+        public DateTime DataCkeckOut { get; set; }
 
         public int Estadia
         {
             get
             {
-                return DataCheckOut.Substract(DataCheckIn).Days;
+                return DataCkeckOut.Subtract(DataCheckIn).Days;
             }
         }
 
