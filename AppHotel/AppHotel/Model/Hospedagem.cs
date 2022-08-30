@@ -16,14 +16,12 @@ namespace AppHotel.Model
             set
             {
                 if (value == 0)
-                    throw new Exception("Por Favor, informe a quantidade de adultos");
+                    throw new Exception("Por favor, informe a quantidade de adultos");
 
                 qnt_adultos = value;
             }
         }
-
         public int QntCriancas { get; set; }
-
         public Suite Quarto
         {
             get => quarto;
@@ -31,21 +29,18 @@ namespace AppHotel.Model
             set
             {
                 if (value == null)
-                    throw new Exception("Por Favor, selecione uma suíte.");
+                    throw new Exception("Por favor, selecione uma suíte.");
 
                 quarto = value;
             }
         }
-
         public DateTime DataCheckIn { get; set; }
-
-        public DateTime DataCkeckOut { get; set; }
-
+        public DateTime DataCheckOut { get; set; }
         public int Estadia
         {
             get
             {
-                return DataCkeckOut.Subtract(DataCheckIn).Days;
+                return DataCheckOut.Subtract(DataCheckIn).Days;
             }
         }
 

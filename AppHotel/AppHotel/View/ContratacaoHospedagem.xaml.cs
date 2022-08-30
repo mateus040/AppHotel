@@ -32,7 +32,7 @@ namespace AppHotel.View
             dtpck_checkin.MinimumDate = DateTime.Now;
             dtpck_checkin.MaximumDate = DateTime.Now.AddMonths(6);
 
-            dtpck_ckeckout.MinimumDate = DateTime.Now;
+            dtpck_ckeckout.MinimumDate = DateTime.Now.AddDays(1);
             dtpck_ckeckout.MaximumDate = DateTime.Now.AddMonths(6).AddDays(1);
         }
 
@@ -48,7 +48,7 @@ namespace AppHotel.View
                         QntCriancas = Convert.ToInt32(stp_criancas.Value),
                         Quarto = (Suite)pck_suites.SelectedItem,
                         DataCheckIn = dtpck_checkin.Date,
-                        DataCkeckOut = dtpck_ckeckout.Date
+                        DataCheckOut = dtpck_ckeckout.Date
                     }
                 });
 
@@ -63,7 +63,7 @@ namespace AppHotel.View
         {
             DatePicker elemento = (DatePicker)sender;
 
-            dtpck_checkin.MinimumDate = elemento.Date.AddDays(1);
+            dtpck_ckeckout.MinimumDate = elemento.Date.AddDays(1);
             dtpck_ckeckout.MaximumDate = elemento.Date.AddMonths(6);
         }
     }
