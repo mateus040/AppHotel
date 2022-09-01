@@ -38,13 +38,37 @@ namespace AppHotel
         };
 
 
+
+        public List<DadosUsuario> list_usuarios = new List<DadosUsuario>
+        {
+            new DadosUsuario()
+            {
+                Email = "aluno@etec",
+                Nome = "Aluno",
+                Senha = "123"
+            },
+            new DadosUsuario()
+            {
+                Email = "prof@etec",
+                Nome = "Professor",
+                Senha = "456"
+            }
+
+        };
+
+
         public App()
         {
             InitializeComponent();
 
             Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-BR");
 
-            MainPage = new NavigationPage(new View.ContratacaoHospedagem());
+            if (Properties.ContainsKey("usuario_logado"))
+                MainPage = new NavigationPage(new View.ContratacaoHospedagem());
+            else
+                MainPage = new Login();
+
+           /* MainPage = new NavigationPage(new View.ContratacaoHospedagem()); */
         }
 
         protected override void OnStart()
