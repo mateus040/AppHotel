@@ -2,6 +2,7 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppHotel.App">
+
     <Application.Resources>
 
         <Style TargetType="Label" x:Key="fontePersonalizada">
@@ -32,7 +33,7 @@
         </Style>
 
         <Style TargetType="Label" x:Key="Explicativos">
-            <Setter Property="TextColor" Value="#A020F0" />
+            <Setter Property="TextColor" Value="DarkOliveGreen" />
             <Setter Property="FontAttributes" Value="Bold" />
             <Setter Property="HorizontalTextAlignment" Value="Center" />
             <Setter Property="TextTransform" Value="Uppercase" />
@@ -51,30 +52,5 @@
             <Setter Property="CornerRadius" Value="10" />
         </Style>
 
-
-
-        <ResourceDictionary>
-
-            <Style TargetType="Button">
-                <Setter Property="HorizontalOptions" Value="Center" />
-                <Setter Property="BackgroundColor" Value="Transparent" />
-                <Setter Property="TextColor" Value="White" />
-                <Setter Property="Padding" Value="5" />
-                <Setter Property="BorderColor" Value="White" />
-                <Setter Property="BorderWidth" Value="1" />
-                <Setter Property="CornerRadius" Value="10" />
-            </Style>
-
-            <Style TargetType="Label">
-                <Setter Property="TextColor" Value="White" />
-                <Setter Property="FontSize" Value="Medium" />
-            </Style>
-
-        </ResourceDictionary>
-        
-        
-
-
-        
     </Application.Resources>
 </Application>

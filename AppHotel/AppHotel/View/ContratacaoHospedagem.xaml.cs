@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
 using AppHotel.Model;
 
 namespace AppHotel.View
@@ -52,7 +51,7 @@ namespace AppHotel.View
                     }
                 });
 
-            } 
+            }
             catch (Exception ex)
             {
                 DisplayAlert("Ops", ex.Message, "OK");

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
+using Xamarin.Forms;
+
 namespace AppHotel.Model
 {
     public class Suite
@@ -11,5 +13,6 @@ namespace AppHotel.Model
         public double ValorDiariaAdulto { get; set; }
 
         public double ValorDiariaCrianca { get; set; }
+
     }
 }
