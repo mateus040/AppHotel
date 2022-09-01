@@ -60,8 +60,12 @@ namespace AppHotel
 
             Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-BR");
 
+            if (Properties.ContainsKey("usuario_logado"))
+                MainPage = new NavigationPage(new View.ContratacaoHospedagem());
+            else
+                MainPage = new Login();
 
-            MainPage = new NavigationPage(new View.ContratacaoHospedagem());
+            /*MainPage = new NavigationPage(new View.ContratacaoHospedagem());*/
         }
 
         protected override void OnStart()
