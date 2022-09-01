@@ -32,7 +32,7 @@
         </Style>
 
         <Style TargetType="Label" x:Key="Explicativos">
-            <Setter Property="TextColor" Value="DarkOliveGreen" />
+            <Setter Property="TextColor" Value="#A020F0" />
             <Setter Property="FontAttributes" Value="Bold" />
             <Setter Property="HorizontalTextAlignment" Value="Center" />
             <Setter Property="TextTransform" Value="Uppercase" />
