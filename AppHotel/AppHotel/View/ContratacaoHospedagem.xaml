@@ -83,6 +83,9 @@
 
                     <Button Text="Calcular Hospedagem" Clicked="Button_Clicked" />
 
+                    <Button Text="Sair" Clicked="Button_Sair" />
+                    
+
                 </StackLayout>
             </Frame>
 

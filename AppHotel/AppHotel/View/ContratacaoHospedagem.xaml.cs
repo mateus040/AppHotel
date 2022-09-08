@@ -24,6 +24,8 @@ namespace AppHotel.View
 
             PropriedadesApp = (App)Application.Current;
 
+            
+
             pck_suites.ItemsSource = PropriedadesApp.Suites;
 
 
@@ -39,7 +41,7 @@ namespace AppHotel.View
         {
             try
             {
-                Navigation.PushAsync(new HospedagemCalculada()
+                App.Current.MainPage = new HospedagemCalculada()
                 {
                     BindingContext = new Hospedagem()
                     {
@@ -49,7 +51,7 @@ namespace AppHotel.View
                         DataCheckIn = dtpck_checkin.Date,
                         DataCheckOut = dtpck_ckeckout.Date
                     }
-                });
+                };
 
             }
             catch (Exception ex)
@@ -64,6 +66,17 @@ namespace AppHotel.View
 
             dtpck_ckeckout.MinimumDate = elemento.Date.AddDays(1);
             dtpck_ckeckout.MaximumDate = elemento.Date.AddMonths(6);
+        }
+
+        private async void Button_Sair(object sender, EventArgs e)
+        {
+            bool confirme = await DisplayAlert("Quer mesmo sair?", "Sair da conta", "Sim", "Não");
+
+            if(confirme)
+            {
+                App.Current.Properties.Remove("usuario_logado");
+                App.Current.MainPage = new Login();
+            }
         }
     }
 }
